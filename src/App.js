@@ -237,7 +237,7 @@ class App extends Component {
                 color: "white"
               }}
             >
-              <h1>St.Benildus Archive Manager</h1>
+              <h1>Dorty Image Compressor</h1>
             </Paper>
           </Col>
         </Row>
