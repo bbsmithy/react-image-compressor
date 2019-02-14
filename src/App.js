@@ -3,7 +3,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import ImageCompressor from "image-compressor";
 import fbICU from "./FirebaseICU";
-import fire from "./fire";
 import Divider from "material-ui/Divider";
 import Paper from "material-ui/Paper";
 import TextField from "material-ui/TextField";
@@ -16,7 +15,7 @@ import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
 import Jumbotron from "react-bootstrap/lib/Jumbotron";
 
-const FirebaseICU = new fbICU(fire.storage());
+const FirebaseICU = new fbICU();
 
 const UploadFolderPicker = props => {
   return (
@@ -272,7 +271,7 @@ class App extends Component {
               </label>
             )}
           </Col>
-          <Col md={6}>
+          {/*<Col md={6}>
             <Row>
               {this.renderUploadButton()}
               <UploadFolderPicker
@@ -280,7 +279,7 @@ class App extends Component {
                 handleChange={this._handleUploadFolderChange}
               />
             </Row>
-          </Col>
+              </Col>*/}
         </Row>
         <Row>
           <Col xs={6} md={6}>

@@ -1,7 +1,4 @@
 export default class firebaseICU {
-  constructor(storage) {
-    this.storage = storage;
-  }
 
   compress = (source_img_obj, desiredSize, imageSize, output_format) => {
     if (desiredSize < imageSize) {
@@ -24,21 +21,6 @@ export default class firebaseICU {
       return newImageData;
     }
     return source_img_obj.src;
-  };
-
-  upload = (data_url, filePath) => {
-    return new Promise((resolve, reject) => {
-      this.storage
-        .ref()
-        .child(filePath)
-        .putString(data_url, "data_url")
-        .then(snapshot => {
-          resolve();
-        })
-        .catch(err => {
-          reject();
-        });
-    });
   };
 
   getImageSize = (image, formatted, decimals) => {
